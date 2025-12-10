@@ -23,13 +23,13 @@ $result = mysqli_stmt_get_result($stmt);
 
 if ($row = mysqli_fetch_assoc($result)) {
     if (password_verify($password, $row['password'])) {
-        // ✅ เข้าสู่ระบบสำเร็จ
+        // เข้าสู่ระบบสำเร็จ
         $_SESSION['customer_id'] = $row['customer_ID'];
         $_SESSION['fullname']    = $row['fullname'];
         $_SESSION['username']    = $row['username'];
         $_SESSION['role']        = $row['role']; // จำเป็นสำหรับ Web_Page.php
 
-        // 👉 ส่งไปหน้า Dashboard (Web_Page.php) เป็นหน้าแรก
+        // ส่งไปหน้า Dashboard Web_Page.php
         header("Location: Web_Page.php");
         exit;
     } else {

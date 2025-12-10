@@ -1,7 +1,7 @@
 <?php
 include 'connect.php';
 
-// รับค่า (Code เดิมของคุณ)
+// รับค่า เริด
 $username = isset($_POST['username']) ? $_POST['username'] : '';
 $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
 $fullname = isset($_POST['full-name']) ? $_POST['full-name'] : '';
@@ -9,7 +9,7 @@ $password = isset($_POST['password']) ? $_POST['password'] : '';
 $confirm_password = isset($_POST['confirm_password']) ? $_POST['confirm_password'] : '';
 $agreeTerms = isset($_POST['agreeTerms']) ? $_POST['agreeTerms'] : '';
 
-// เริ่ม HTML Output
+// HTML Output ้า
 ?>
 <!DOCTYPE html>
 <html lang="th">
@@ -53,7 +53,7 @@ if (empty($agreeTerms)) {
     exit();
 }
 
-// Hashing & Save
+// Hashing  Save
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 $sql = "INSERT INTO customer (username, phone, fullname, password) VALUES (?, ?, ?, ?)";
 $stmt = mysqli_prepare($con, $sql);

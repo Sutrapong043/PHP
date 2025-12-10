@@ -54,12 +54,16 @@
                 </label>
             </div>
 
-            <button type="submit" class="btn btn-success btn-primary-custom fw-bold">สมัครสมาชิก</button>
+            <button type="submit" class="btn btn-primary w-100">สมัครสมาชิก</button>
         </form>
+        
+        <div class="text-center mt-3">
+        <span>มีบัญชีอยู่แล้ว?</span>
+        <a href="Login.php" class="btn btn-outline-secondary btn-sm ms-2">
+                     เข้าสู่ระบบ
+        </a>
+</div>
 
-        <div class="text-center mt-4">
-            <small class="text-muted">มีบัญชีอยู่แล้ว? <a href="Login.php" class="text-decoration-none fw-bold text-success">เข้าสู่ระบบ</a></small>
-        </div>
     </div>
 </body>
 </html>
